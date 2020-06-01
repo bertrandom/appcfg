@@ -79,7 +79,7 @@ And one for testing, `test.yml`:
 databases:
     mongo:
         host: mock
-secret:
+secrets:
     mysecret: wellknown
 ```
 
