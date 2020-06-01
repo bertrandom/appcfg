@@ -53,7 +53,7 @@ include = ["appcfg/*", "tests/*"]
 
 [tool.commitizen]
 version = "0.1.0"
-version_files = ["pytest_reraise/__init__.py", "pyproject.toml:version"]
+version_files = ["appcfg/__init__.py", "pyproject.toml:version"]
 bump_message = "chore(Release): Release $new_version [skip ci]"
 
 [build-system]
