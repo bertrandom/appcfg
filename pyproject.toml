@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "appcfg"
-version = "1.0.0"
+version = "1.1.0"
 description = "Flexible hierarchic Python application configuration"
 authors = ["bjoluc <mail@bjoluc.de>"]
 license = "MIT"
@@ -52,7 +52,7 @@ branch = true
 include = ["appcfg/*", "tests/*"]
 
 [tool.commitizen]
-version = "1.0.0"
+version = "1.1.0"
 version_files = ["appcfg/__init__.py", "pyproject.toml:version"]
 bump_message = "chore(Release): Release $new_version [skip ci]"
 
