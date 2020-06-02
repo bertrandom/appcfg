@@ -17,7 +17,7 @@ It may also need to be customizable via an environment variable.
 
 ## Getting Started
 
-Let's start by installing `appcfg` with ```pip install appcfg["yaml"]```, or simply ```pip install appcfg``` if you want to use the JSON format instead of YAML for config files.
+Let's start by installing `appcfg` with ```pip install appcfg[yaml]```, or simply ```pip install appcfg``` if you want to use the JSON format instead of YAML for config files.
 
 In the top-level directory of your application (where the topmost `__init__.py` file is located), create a `config` directory.
 If your application consists of a single Python file, just locate the `config` directory next to it.
