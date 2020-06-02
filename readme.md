@@ -159,4 +159,13 @@ the `development.json` or `development.yml` config file.
   directory will only be loaded once and the same dict object will be returned by
   every subsequent call to `get_config()`.
 
+
+### get_env
+
+If an `ENV`, `PY_ENV`, or `ENVIRONMENT` (listed in the order of precedence) environment variable is set, return the value of it. Otherwise, return "default".
+
+
+Special cases:
+  - "dev" and "develop" are mapped to "development"
+
 <!-- END API DOC -->

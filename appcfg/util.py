@@ -76,11 +76,10 @@ def load_config_file(config_dir: Path, name: str, strict=False):
 
 def get_environment():
     """
-    If an `ENV`, `PY_ENV`, or `ENVIRONMENT` environment variable is set, return the
-    value of it. Otherwise, return "default".
+    If an `ENV`, `PY_ENV`, or `ENVIRONMENT` (listed in the order of precedence) environment variable is set, return the value of it. Otherwise, return "default".
 
     Special cases:
-        * "dev" and "develop" are mapped to "development"
+      - "dev" and "develop" are mapped to "development"
     """
     value = None
     for key in ["ENV", "PY_ENV", "ENVIRONMENT"]:
