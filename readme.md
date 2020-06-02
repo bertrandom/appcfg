@@ -83,7 +83,7 @@ secrets:
     mysecret: wellknown
 ```
 
-By default, none of those config files will be used.
+By default, none of these config files will be used.
 However, an environment can be specified by setting the `ENV` environment variable (alternatively, `PY_ENV` or `ENVIRONMENT` are also supported).
 In this case, the configuration options from the corresponding config file will be merged into the ones from `default.yml`.
 If, for instance, `ENV` is set to `production`, the config dict returned from `get_config()` will contain all the values from `default.yml`, but `config["databases"]["mongo"]["host"]` will be set to `mongodb` instead of `localhost`.
@@ -108,6 +108,7 @@ secrets:
 This way, if one of the specified environment variables is set, it will override the corresponding field's value from any other configuration file.
 Otherwise, that value is left untouched.
 For instance, setting `MONGO_HOST=myhost` would result in `config["databases"]["mongo"]["host"]` to be `myhost`, ignoring `localhost` from `default.yml` or `mongodb` from `production.yml`.
+Note that config values set via environment variables are always of type `str`, regardless of the overridden value's type.
 
 ## Tips and Tricks
 
