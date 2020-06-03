@@ -149,8 +149,8 @@ the `development.json` or `development.yml` config file.
 **Arguments**:
 
 - `module_name` (`str`): The name of the module (or any of its submodules) for which
-  the configuration should be loaded for. `__name__` can be used when `get_config()`
-  is called from the Python project that contains the `config` directory. Note that
+  the configuration should be loaded. `__name__` can be used when `get_config()` is
+  called from the Python project that contains the `config` directory. Note that
   `appcfg` requires the `config` directory to be a direct child of the top-level
   package directory, or, if not a package, the directory that contains the specified
   module.
