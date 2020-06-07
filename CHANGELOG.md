@@ -1,3 +1,9 @@
+## 1.1.1 (2020-06-07)
+
+### Fix
+
+- **Typing**: Fix return type of `get_config()`
+
 ## 1.1.0 (2020-06-02)
 
 ### Feat

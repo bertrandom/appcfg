@@ -1,4 +1,4 @@
-__version__ = "1.1.0"
+__version__ = "1.1.1"
 
 from appcfg.appcfg import get_config
 from appcfg.util import get_environment as get_env
