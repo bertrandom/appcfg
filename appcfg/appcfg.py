@@ -12,7 +12,7 @@ from typing import Dict
 _config_cache: Dict[str, dict] = {}
 
 
-def _get_config(config_dir):
+def _get_config(config_dir) -> dict:
     """
     Given a config directory, assemble and return the corresponding configuration dict
     """
