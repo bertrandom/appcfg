@@ -1,12 +1,12 @@
 # appcfg
 
-[![PyPI version fury.io](https://badge.fury.io/py/appcfg.svg)](https://pypi.python.org/pypi/appcfg/)
-[![Build Status](https://travis-ci.com/bjoluc/appcfg.svg?branch=master)](https://travis-ci.com/bjoluc/appcfg)
-[![codecov](https://codecov.io/gh/bjoluc/appcfg/branch/master/graph/badge.svg)](https://codecov.io/gh/bjoluc/appcfg)
+[![PyPI](https://img.shields.io/pypi/v/appcfg)](https://pypi.python.org/pypi/appcfg/)
+[![GitHub Workflow Status](https://img.shields.io/github/workflow/status/bjoluc/appcfg/build)](https://github.com/bjoluc/appcfg/actions)
+[![codecov](https://codecov.io/gh/bjoluc/appcfg/branch/main/graph/badge.svg)](https://codecov.io/gh/bjoluc/appcfg)
 [![PyPI pyversions](https://img.shields.io/pypi/pyversions/appcfg.svg)](https://pypi.python.org/pypi/appcfg/)
 [![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
 
-Flexible hierarchic Python application configuration inspired by [node-config](https://github.com/lorenwest/node-config)
+Simple hierarchic Python application configuration inspired by [node-config](https://github.com/lorenwest/node-config)
 
 ## Motivation
 
