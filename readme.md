@@ -5,6 +5,7 @@
 [![codecov](https://codecov.io/gh/bjoluc/appcfg/branch/main/graph/badge.svg)](https://codecov.io/gh/bjoluc/appcfg)
 [![PyPI pyversions](https://img.shields.io/pypi/pyversions/appcfg.svg)](https://pypi.python.org/pypi/appcfg/)
 [![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
+[![semantic-release](https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079)](https://github.com/bjoluc/semantic-release-config-poetry)
 
 Simple hierarchic Python application configuration inspired by [node-config](https://github.com/lorenwest/node-config)
 
