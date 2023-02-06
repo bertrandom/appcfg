@@ -1,7 +1,7 @@
 # appcfg
 
 [![PyPI](https://img.shields.io/pypi/v/appcfg)](https://pypi.python.org/pypi/appcfg/)
-[![GitHub Workflow Status](https://img.shields.io/github/workflow/status/bjoluc/appcfg/build)](https://github.com/bjoluc/appcfg/actions)
+[![GitHub Workflow Status](https://img.shields.io/github/actions/workflow/status/bjoluc/appcfg/build.yml)](https://github.com/bjoluc/appcfg/actions)
 [![codecov](https://codecov.io/gh/bjoluc/appcfg/branch/main/graph/badge.svg)](https://codecov.io/gh/bjoluc/appcfg)
 [![PyPI pyversions](https://img.shields.io/pypi/pyversions/appcfg.svg)](https://pypi.python.org/pypi/appcfg/)
 [![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
@@ -18,7 +18,7 @@ It may also need to be customizable via an environment variable.
 
 ## Getting Started
 
-Let's start by installing `appcfg` with ```pip install appcfg[yaml]```, or simply ```pip install appcfg``` if you want to use the JSON format instead of YAML for config files.
+Let's start by installing `appcfg` with `pip install appcfg[yaml]`, or simply `pip install appcfg` if you want to use the JSON format instead of YAML for config files.
 
 In the top-level directory of your application (where the topmost `__init__.py` file is located), create a `config` directory.
 If your application consists of a single Python file, just locate the `config` directory next to it.
@@ -42,13 +42,13 @@ In the database example from the previous section, `default.yml` might look like
 
 ```yaml
 databases:
-    mongo:
-        host: localhost
-        port: 27017
-        user: myuser
-        pass: mypassword
+  mongo:
+    host: localhost
+    port: 27017
+    user: myuser
+    pass: mypassword
 secrets:
-    mysecret: secret
+  mysecret: secret
 ```
 
 Within any module in the `myproject` package, we can now simply access that configuration as a `dict` object:
@@ -70,18 +70,18 @@ Let's add an override config file for production, `production.yml`:
 
 ```yaml
 databases:
-    mongo:
-        host: mongodb
+  mongo:
+    host: mongodb
 ```
 
 And one for testing, `test.yml`:
 
 ```yaml
 databases:
-    mongo:
-        host: mock
+  mongo:
+    host: mock
 secrets:
-    mysecret: wellknown
+  mysecret: wellknown
 ```
 
 By default, none of these config files will be used.
@@ -98,12 +98,12 @@ This can be achieved by adding an `env-vars.yml` config file with the following 
 
 ```yaml
 databases:
-    mongo:
-        host: MONGO_HOST
-        user: MONGO_USER
-        pass: MONGO_PASS
+  mongo:
+    host: MONGO_HOST
+    user: MONGO_USER
+    pass: MONGO_PASS
 secrets:
-    mysecret: MY_SECRET
+  mysecret: MY_SECRET
 ```
 
 This way, if one of the specified environment variables is set, it will override the corresponding field's value from any other configuration file.
@@ -130,11 +130,9 @@ in your pytest configuration.
 
 ## API
 
-
 ### get_config
 
 Returns a dict that contains the content of `default.json` or `default.yml` in the `config` directory within the root module's directory, inferred from `module_name`.
-
 
 If an `ENV`, `PY_ENV`, or `ENVIRONMENT` variable is set (listed in the order of
 precedence), and a config file with a base name corresponding to that variable's
@@ -160,13 +158,12 @@ the `development.json` or `development.yml` config file.
   directory will only be loaded once and the same dict object will be returned by
   every subsequent call to `get_config()`.
 
-
 ### get_env
 
 If an `ENV`, `PY_ENV`, or `ENVIRONMENT` (listed in the order of precedence) environment variable is set, return the value of it. Otherwise, return "default".
 
-
 Special cases:
-  - "dev" and "develop" are mapped to "development"
+
+- "dev" and "develop" are mapped to "development"
 
 <!-- END API DOC -->
