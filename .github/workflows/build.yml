@@ -10,8 +10,8 @@ jobs:
       matrix:
         python-version: [3.7, 3.8, 3.9, 3.10, 3.11]
     steps:
-      - uses: actions/checkout@v2
-      - uses: actions/setup-python@v2
+      - uses: actions/checkout@v3
+      - uses: actions/setup-python@v4
         with:
           python-version: ${{ matrix.python-version }}
       - name: Install Poetry and Tox
@@ -20,7 +20,7 @@ jobs:
         run: tox -e py -e flake8
       - name: Install coverage.py globally so that codecov can find it
         run: pip install coverage==5.2
-      - uses: codecov/codecov-action@v1
+      - uses: codecov/codecov-action@v3
         with:
           fail_ci_if_error: true
   release:
@@ -29,13 +29,12 @@ jobs:
     needs: test
     if: github.repository_owner == 'bjoluc' && github.event_name == 'push' && github.ref == 'refs/heads/main'
     steps:
-      - uses: actions/checkout@v2
-      - uses: actions/setup-python@v2
+      - uses: actions/checkout@v3
+      - uses: actions/setup-python@v4
         with:
           python-version: 3.10
       - name: Install poetry
         run: pip install poetry==1.1.6
-      - uses: bjoluc/semantic-release-config-poetry@v1
+      - uses: bjoluc/semantic-release-config-poetry@v2
         with:
           pypi_token: ${{ secrets.PYPI_TOKEN }}
-          github_token: ${{ secrets.GITHUB_TOKEN }}
