@@ -5,11 +5,8 @@ from pathlib import Path
 
 from deepmerge import Merger
 
-from appcfg.exceptions import (
-    ConfigFileNotFoundError,
-    InvalidModuleNameError,
-    YamlExtraRequiredError,
-)
+from appcfg.exceptions import (ConfigFileNotFoundError, InvalidModuleNameError,
+                               YamlExtraRequiredError)
 
 
 def get_module_path(module_name: str) -> Path:
@@ -58,7 +55,11 @@ def load_config_file(config_dir: Path, name: str, strict=False):
         path = base_path.with_suffix("." + suffix)
         if path.is_file():
             with path.open() as f:
-                if suffix == "json":
+                if suffix == "json5":
+                    import json5
+
+                    return json5.load(f)
+                elif suffix == "json":
                     import json
 
                     return json.load(f)

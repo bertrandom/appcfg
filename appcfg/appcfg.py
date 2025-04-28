@@ -1,12 +1,8 @@
-from appcfg.util import (
-    compile_env_vars_template,
-    get_config_dir,
-    get_environment,
-    load_config_file,
-    merge_configs,
-    validate_env_vars_template,
-)
 from typing import Dict
+
+from appcfg.util import (compile_env_vars_template, get_config_dir,
+                         get_environment, load_config_file, merge_configs,
+                         validate_env_vars_template)
 
 # Map config directories to the corresponding config objects
 _config_cache: Dict[str, dict] = {}
