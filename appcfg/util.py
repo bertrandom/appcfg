@@ -51,7 +51,7 @@ def load_config_file(config_dir: Path, name: str, strict=False):
     """
     base_path = config_dir / name
 
-    for suffix in ["json", "yml", "yaml"]:
+    for suffix in ["json5", "json", "yml", "yaml"]:
         path = base_path.with_suffix("." + suffix)
         if path.is_file():
             with path.open() as f:
